@@ -13,7 +13,6 @@ export class HomeComponent {
     myService.GetAllUsers().subscribe(
       {
         next:(data)=>{
-          //console.log(data)
           this.users = data;
         },
         error:(err)=>{console.log(err)}

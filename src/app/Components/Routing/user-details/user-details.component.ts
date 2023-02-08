@@ -10,17 +10,10 @@ import { ServicesService } from 'src/app/Services/services.service';
 export class UserDetailsComponent implements OnInit{
   ID=0;
   user:any;
-  // name = "";
-  // address = "";
-  // username = "";
-  // email = "";
+
   constructor(private myActivated:ActivatedRoute, private myService:ServicesService){
     this.ID = myActivated.snapshot.params["id"];
     console.log(myActivated);
-    // this.name = myActivated.snapshot.params["name"];
-    // this.userName = myActivated.snapshot.params["username"];
-    // this.address = myActivated.snapshot.params["address.city"];
-    // this.email =myActivated.snapshot.params["email"];
 
 
     myService.GetUserByID(this.ID).subscribe(
