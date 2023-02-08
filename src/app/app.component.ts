@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Day_1';
+  dataFromRegister:any;
+  getDataFromRegister(data:any){
+    this.dataFromRegister = data;
+  }
 }
